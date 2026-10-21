@@ -1,0 +1,12 @@
+config LVX_USE_DEMO_CONTEST2026_191_EPAPER_TODO
+	bool "6-inch e-paper todo and Xiaozhi MCP service"
+	default n
+	---help---
+		Enable the SPI e-paper todo application. The mcp command exposes
+		JSON-RPC tools over stdin/stdout for a Xiaozhi host.
+
+config EPAPER_TODO_SPI_DEV
+	string "E-paper SPI device"
+	default "/dev/spidev0.0"
+	depends on LVX_USE_DEMO_CONTEST2026_191_EPAPER_TODO
+
